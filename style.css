@@ -1,0 +1,95 @@
+html, body {
+    height: 100%; /* Establece la altura del html y del body al 100% de la ventana del navegador */
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    padding: 0; /* Elimina cualquier relleno predeterminado */
+}   
+
+body {
+            background-image: url('./Images/Fondo2.jpg');
+            background-size: cover; /* Para que la imagen cubra todo el fondo */
+            background-position: center; /* Para centrar la imagen */
+            background-repeat: repeat-y; /* Para que la imagen se repita verticalmente */
+}
+
+.navegacion{
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    /*background-image: url(./Images/Chow.png);
+    background-size: 200px;*/
+    
+}
+
+.navegacion__logo{
+    height: 200px;
+    margin-left:20px;
+    margin-top: 10px;
+}
+
+.navegacion__links{
+    display: flex;
+    align-items: flex-end;
+}
+
+.navegacion__links li{
+    list-style: none;
+}
+
+.navegacion__links li a{
+    text-decoration: none;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: brown;
+}
+
+.corey__bakery{
+    display: flex;
+    align-self: center;
+}
+
+.corey__titulo {
+    align-self: center;
+    font-family: "Miltonian", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    border: 30px solid transparent;
+    border-image: url(./Images/patita2.png);
+  }
+
+.recursos{
+    height: 700px; 
+    width: 1300px; 
+    background-color: rgba(163, 143, 189, 0.2); 
+    display: flex; 
+    margin-top: 20px;
+    border: 20px solid transparent; /* El grosor del borde */
+    border: 5px groove rgb(250, 178, 250);
+}
+
+.recursos__navegacion{
+    display: flex;
+    flex: 2; 
+    padding: 20px;
+}
+
+.recursos__recetas h1{
+    width: 900px;
+    font-family: "Miltonian", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    list-style-image: url(./Images/patita.png);
+    
+}
+
+.recursos__adicionales{
+    flex: 1; 
+    width: 400px;
+    background-color: rgba(212, 101, 235, 0.2); 
+    padding: 20px; border-left: 5px,solid,white;
+}

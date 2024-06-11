@@ -1,7 +1,9 @@
 html, body {
     height: 100%; /* Establece la altura del html y del body al 100% de la ventana del navegador */
+    width: 100%;
     margin: 0; /* Elimina cualquier margen predeterminado */
     padding: 0; /* Elimina cualquier relleno predeterminado */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }   
 
 body {
@@ -9,7 +11,21 @@ body {
             background-size: cover; /* Para que la imagen cubra todo el fondo */
             background-position: center; /* Para centrar la imagen */
             background-repeat: repeat-y; /* Para que la imagen se repita verticalmente */
+            position: relative; /* Necesario para posicionar el overlay */
 }
+
+/*.imagen__arriba{
+    background-image: url(./Images/patita_rosada.png); /* Imagen pequeña en PNG para el patrón 
+    background-repeat: repeat;  Repite la imagen en ambas direcciones 
+    position: absolute;  Superpone sobre el fondo principal 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; Permite hacer clic a través del overlay 
+    z-index: 1;  Asegura que esté por encima del fondo 
+    /*opacity: 0.5; Opcional: ajusta la opacidad si es necesario 
+}*/
 
 .navegacion{
     display: flex;
@@ -57,19 +73,30 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 80px;
+    color: brown;
     border: 30px solid transparent;
     border-image: url(./Images/patita2.png);
   }
 
 .recursos{
-    height: 700px; 
+    display: flex;
     width: 1300px; 
     background-color: rgba(163, 143, 189, 0.2); 
-    display: flex; 
     margin-top: 20px;
-    border: 20px solid transparent; /* El grosor del borde */
     border: 5px groove rgb(250, 178, 250);
+    /*border: 20px solid transparent; /* El grosor del borde */
+    padding: 20px;
+    box-sizing: border-box;
 }
+
+.recursos__recetas, .recursos__adicionales {
+    flex: 1;
+}
+
+.recursos__recetas article {
+    margin-bottom: 20px;
+}
+
 
 .recursos__navegacion{
     display: flex;
@@ -83,19 +110,135 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
-    list-style-image: url(./Images/patita.png);
-    
+    color: brown;
+    list-style-image: url(./Images/patita.png);   
+}
+
+.recursos__recetas h2{
+    font-family: "Miltonian Tattoo", serif;
+    font-weight: 400;
+    font-style: normal; 
+    color: brown; 
+}
+
+.recursos__recetas p{
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: brown; 
+}
+
+.recursos__adicionales ul{
+    list-style: none;
 }
 
 .recursos__adicionales{
     flex: 1; 
     width: 400px;
+    font-family: "Miltonian Tattoo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: brown;
     background-color: rgba(212, 101, 235, 0.2); 
     padding: 20px; border-left: 5px,solid,white;
 }
 
+.recursos__adicionales li{
+    flex: 1; 
+    width: 400px;
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: rgb(148, 45, 45);
+    /*background-color: rgba(212, 101, 235, 0.2);*/ 
+    padding: 20px; border-left: 5px,solid,white;
+
+    background-image: url(./Images/patita2.png); /* Ruta de la imagen */
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    background-position: 0 50%; /* Alinea la imagen verticalmente en el centro */
+    padding-left: 30px; /* Da espacio a la izquierda para la imagen */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+    }
+
 .recursos__testimonios{
-    height: 200px;
-    width: 1300px; 
     background-color: rgba(212, 101, 235, 0.2);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: brown;
+    /*border: 5px groove rgb(250, 178, 250);
+    padding: 20px;*/
+    box-sizing:content-box;    
+    }
+
+.recursos__testimonios h2 {
+    font-family: "Miltonian Tattoo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px; 
+    color: brown;   
+    }
+
+.recursos__testimonios ul{
+    list-style: none;
+}
+
+.recursos__testimonios li a{
+    text-decoration: none;
+    color: brown;
+}
+
+.recursos__testimonios li {
+    background-image: url(./Images/patita2.png); /* Ruta de la imagen */
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    background-position: 0 50%; /* Alinea la imagen verticalmente en el centro */
+    padding-left: 30px; /* Da espacio a la izquierda para la imagen */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+}
+
+.recursos__contactos{
+    display: flex;
+    height: auto; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    background-color: rgba(212, 101, 235, 0.2); 
+    padding-bottom: 30px;
+}
+
+.recursos__contactos h3 {
+    font-family: "Miltonian Tattoo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.recursos__contactos ul li p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    size: 70px;
+    color: brown;
+    margin: 10px 0;
+}
+
+.recursos__contactos ul{
+    list-style: none;
+}
+
+.final__links{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.logos{
+    width: 100px;
+    height: auto;
 }

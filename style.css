@@ -14,26 +14,10 @@ body {
             position: relative; /* Necesario para posicionar el overlay */
 }
 
-/*.imagen__arriba{
-    background-image: url(./Images/patita_rosada.png); /* Imagen pequeña en PNG para el patrón 
-    background-repeat: repeat;  Repite la imagen en ambas direcciones 
-    position: absolute;  Superpone sobre el fondo principal 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; Permite hacer clic a través del overlay 
-    z-index: 1;  Asegura que esté por encima del fondo 
-    /*opacity: 0.5; Opcional: ajusta la opacidad si es necesario 
-}*/
-
 .navegacion{
     display: flex;
     height: 200px;
-    justify-content: space-between;
-    /*background-image: url(./Images/Chow.png);
-    background-size: 200px;*/
-    
+    justify-content: space-between;   
 }
 
 .navegacion__logo{
@@ -67,7 +51,7 @@ body {
     align-self: center;
 }
 
-.corey__titulo {
+.corey__titulo{
     align-self: center;
     font-family: "Miltonian", serif;
     font-weight: 400;
@@ -104,7 +88,11 @@ body {
     padding: 20px;
 }
 
-.recursos__recetas h1{
+.receta__ind{
+    padding-bottom: 30px;
+}
+
+.recursos__recetas h1, .recursos__pedido h1{
     width: 900px;
     font-family: "Miltonian", serif;
     font-weight: 400;
@@ -121,7 +109,7 @@ body {
     color: brown; 
 }
 
-.recursos__recetas p{
+.recursos__recetas, .recursos__historia p{
     font-family: "Sacramento", cursive;
     font-weight: 400;
     font-style: normal;
@@ -129,12 +117,16 @@ body {
     color: brown; 
 }
 
+
+
 .recursos__adicionales ul{
     list-style: none;
 }
 
 .recursos__adicionales{
     flex: 1; 
+    display: flex;
+    flex-direction: column;
     width: 400px;
     font-family: "Miltonian Tattoo", serif;
     font-weight: 400;
@@ -145,7 +137,7 @@ body {
     padding: 20px; border-left: 5px,solid,white;
 }
 
-.recursos__adicionales li{
+.recursos__adicionales li, .recursos__productos li{
     flex: 1; 
     width: 400px;
     font-family: "Sacramento", cursive;
@@ -164,26 +156,53 @@ body {
     margin-bottom: 10px; /* Espacio entre elementos de la lista */
     }
 
+    .recursos__adicionales li a, .recursos__productos li a{
+        text-decoration: none;
+        color: brown;
+    }
+
+.muestra{
+    width: 300px;
+    height: auto;
+    border: solid brown 10px;
+}    
+
+.imagenes__muestra{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.imagenes__muestra li{
+    list-style: none;
+    border: 30px solid transparent;
+    border-image: url(./Images/patita2.png);
+}
+
 .recursos__testimonios{
     background-color: rgba(212, 101, 235, 0.2);
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: italic;
     color: brown;
-    /*border: 5px groove rgb(250, 178, 250);
-    padding: 20px;*/
+    /*border: 5px groove rgb(250, 178, 250);*/
+    padding: 20px;
     box-sizing:content-box;    
     }
 
-.recursos__testimonios h2 {
+.corey__bakery p a{
+    text-decoration: none;
+    color: brown;
+}
+
+.recursos__testimonios h2,.recursos__historia h2, .recursos__productos h1 {
     font-family: "Miltonian Tattoo", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 25px; 
+    font-size:40px; 
     color: brown;   
     }
 
-.recursos__testimonios ul{
+.recursos__testimonios ul, .recursos__productos ul{
     list-style: none;
 }
 
@@ -207,7 +226,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%; 
-    background-color: rgba(212, 101, 235, 0.2); 
+    background-color: rgba(212, 101, 235, 0.5);
     padding-bottom: 30px;
 }
 
@@ -217,13 +236,13 @@ body {
     font-style: normal;
     font-size: 30px;
     margin: 10px 0;
+    color: brown;
 }
 
 .recursos__contactos ul li p {
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 900;
     font-style: italic;
-    size: 70px;
     color: brown;
     margin: 10px 0;
 }
@@ -242,3 +261,96 @@ body {
     width: 100px;
     height: auto;
 }
+
+.recursos__historia{
+    display: flex;
+    flex-direction: column;
+}
+
+.recursos__historia img {
+    align-self: center;
+    width: 300px;
+    height: auto;
+}
+
+.recursos__historia p {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.recursos__historia h2{
+    text-align: center;
+}
+
+.recursos__productos{
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.recursos__pedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: solid 10px brown;
+}
+
+.recursos__pedido div{
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: solid 4px brown;
+    padding-left: 50px;
+}
+
+.recursos__pedido div label{
+    background-color: rgba(212, 101, 235, 0.2);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: brown;
+    
+}
+
+.recursos__formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recursos__formulario label, .recursos__formulario input {
+    display: inline-block; /* Para que el label no ocupe toda la línea */
+    width: 400px; /* Ajusta el ancho según tus necesidades */
+    text-align: left; /* Alinea el texto dentro del label */
+    margin-bottom: 10px; /* Espacio inferior para separación */
+}
+
+.recursos__formulario label{
+    text-align: center;
+}
+
+.recursos__formulario textarea{
+    margin-right: 52px;
+}
+
+.label__pedido{
+    align-self: center;
+}
+
+.boton__enviar {
+    font-family: "Miltonian Tattoo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    margin: 10px 0;
+    color: brown;
+    border: none;
+    background-color: rgba(212, 101, 235,0.0);
+    align-self:center;
+    }
+

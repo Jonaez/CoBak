@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-ar   ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corey Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./logo_circular.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bonbon&family=Borel&family=Butterfly+Kids&family=Cookie&family=Miltonian&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navegacion">
+            <a href="index.html"><img src="./Images/logo_circular.png" class="navegacion__logo" ></a>
+            <div class="corey__bakery">
+                <p class="corey__titulo"><a href="index.html">Corey Bakery</a></p>
+            </div>
+            <ul class="navegacion__links">
+                <li><a href="./Nosotros.html">Acerca de Nosotros</a></li>
+                <li><a href="Productos.html">Nuestros productos</a></li>
+                <li><a href="Pedidos.html">Hacenos tu pedido!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="recursos__pedido">       
+        <div>    
+            <h1>♥ Tu pedido ♥ </h1>
+            <form class="recursos__formulario" action="mipaginaweb.com" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                <br>
+                <label for="numero">Numero de contacto:</label>
+                <input type="text" id="numero" name="numero" placeholder="Ingresa tu número de celular" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+                <br>
+                <label class="label__pedido" for="pedido">Pedido:</label>
+                <textarea id="pedido" name="pedido" rows="4" placeholder="Escribinos tu pedido acá"></textarea>
+                <br>
+                <input class="boton__enviar" type="submit" value="                  Enviar">
+            </form> 
+        </div>   
+    </section>
+    <footer class="recursos__contactos">
+    <h3>Contactanos!</h3>
+    <ul class="final__links">
+    <li><a href="https://www.instagram.com/corey.bakery/"><img class="logos" src="./Images/logo_ig.png" alt="link_ig"></a></li>
+    <li><a href="https://wa.me/3624668439"><img class="logos" src="./Images/logo_wpp.png" alt="link_wpp"></a></li>
+    <li><img class="logos" src="./Images/patita_rosada_call.png" alt="link_tel"></li>
+    </ul>
+    </footer>   
+</body>
+</html>
